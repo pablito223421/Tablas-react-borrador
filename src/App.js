@@ -1,58 +1,102 @@
-import  React from 'react';
-import MaterialTable from '@material-table/core';
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 
-
-function createData(numero, descripcion, ejecucion, area,anio,progreso) {
-  return { numero, descripcion, ejecucion, area,anio,progreso };
- }
-
- const rows = [
-  createData("E01","Liderzgo y Compromiso"),
-  createData(1,"Objetivo Específico. Verificar el cumplimiento de los grados de los líderes"),
-  createData(1.2,"Organizar reuniones del Comité de Seguridad y Salud en el Trabajo", "Presidente del Comité/Jefe SIGG/ Jefe de SSOMA","Administración"),
- ];
+import "./App.css";
 
 function App() {
-
   return (
-    <TableContainer component={Paper}>
-     <Table aria-label="simple table">
-       <TableHead>
-         <TableRow>
-           <TableCell>S.No</TableCell>
-           <TableCell align="right">N°</TableCell>
-           <TableCell align="right">Descripción de la Actividad</TableCell>
-           <TableCell align="right">Responsable de la Ejecución</TableCell>
-           <TableCell align="right">Área</TableCell>
-           <TableCell align="right">Año 2022</TableCell>
-           <TableCell align="right">Progreso %</TableCell>
-         </TableRow>
-       </TableHead>
-       <TableBody>
-         {rows.map((row) => (
-           <TableRow key={row.numero}>
-             <TableCell component="th" scope="row">
-               {row.numero}
-             </TableCell>
-             <TableCell align="right">{row.numero}</TableCell>
-             <TableCell align="right">{row.descripción}</TableCell>
-             <TableCell align="right">{row.ejecucion}</TableCell>
-             <TableCell align="right">{row.area}</TableCell>
-             <TableCell align="right">{row.anio}</TableCell>
-             <TableCell align="right">{row.progreso}</TableCell>
-           </TableRow>
-         ))}
-       </TableBody>
-     </Table>
-   </TableContainer>
+    <div className="App">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">N°</th>
+            <th rowspan="2">Descripción de la actividad</th>
+            <th rowspan="2">Responsable de la ejecución</th>
+            <th rowspan="2">Área</th>
+            <th colspan="12">Año 2022</th>
+            <th>Progreso</th>
+          </tr>
+          <tr>
+            <th>Ene</th>
+            <th>Feb</th>
+            <th>Mar</th>
+            <th>Abr</th>
+
+            <th>May</th>
+            <th>Jun</th>
+            <th>Jul</th>
+            <th>Ago</th>
+
+            <th>Sep</th>
+            <th>Oct</th>
+            <th>Nov</th>
+            <th>Dic</th>
+            
+            
+            <th></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+        
+          
+          
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+            
+            <td>DIV!0</td>
+            
+          </tr>
+          <tr>
+            <td>1</td>
+            <td colspan="16">Liderazgo y Compromiso</td>
+          </tr>
+          <tr>
+            <td>1.1</td>
+            <td>Organizar reuniones del Comité de Seguridad y Salud en el Trabajo</td>
+            <td>Presidente del Comité/Jefe de Sig/Jefe SSOMA/Comité SST</td>
+            <td>Administración</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td colspan="16">Objetivo Específico: Obtener el liderazgo en SST</td>
+          </tr>
+          <tr>
+            <td>2.1</td>
+            <td>Difusión de las políticas SIG-SSOMA</td>
+            <td>Jefe de Sig/Jefe SSOMA/Comité SST</td>
+            <td>Administración</td>
+          </tr>
+          <tr>
+            <td>2.2</td>
+            <td>Introducción en materia y Salud en Trabajo</td>
+            <td>Jefe de Sig/Jefe SSOMA</td>
+            <td>Administración</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
   );
 }
 
 export default App;
+
+
